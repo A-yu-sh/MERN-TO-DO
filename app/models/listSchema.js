@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const ListSchema = new mongoose.Schema({
-  title: String,
-  body: String,
+  email: String,
+  password: String,
 });
 
 const Listings =

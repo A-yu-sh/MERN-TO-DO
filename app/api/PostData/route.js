@@ -3,8 +3,8 @@ import Listings from "@/app/models/listSchema";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
-  const { title, body } = await request.json();
+  const { email, password } = await request.json();
   await ConnectMongoDB();
-  await Listings.create({ title, body });
+  await Listings.create({ email, password });
   return NextResponse.json({ message: "Task Added" });
 }
